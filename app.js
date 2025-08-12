@@ -16,10 +16,21 @@ function agregarAmigo(){
 
     //let listaAmigos = document.querySelector('#listaAmigos');
     //listaAmigos.innerHTML
-    let listaAmigos = document.getElementById('listaAmigos');
-    listaAmigos.innerHTML += `<li>${amigo}</li>`;
+    //let listaAmigos = document.getElementById('listaAmigos');
+    //listaAmigos.innerHTML += `<li>${amigo}</li>`;
+
     document.getElementById('amigo').value = '';
+    agregarAmigoHTML(amigo);
 
     console.log(amigosSorteo);
+    return;
+}
+
+function agregarAmigoHTML(amigo) {
+    let listaAmigos = document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = ''; // Limpiar la lista antes de agregar
+    for (let i = 0; i < amigosSorteo.length; i++) {
+        listaAmigos.innerHTML += `<li>${amigosSorteo[i]}</li>`;
+    }
     return;
 }
