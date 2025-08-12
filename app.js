@@ -5,17 +5,12 @@ let numeroSorteado = 0;
 
 function agregarAmigo(){
     let amigo = document.getElementById('amigo').value;
-    console.log(amigo);
-    console.log(typeof(amigo));
     if (amigo === '') {
         alert('Por favor, ingresa el nombre de un amigo.');
         return;
     }
-
     amigosSorteo.push(amigo);
 
-    //let listaAmigos = document.querySelector('#listaAmigos');
-    //listaAmigos.innerHTML
     //let listaAmigos = document.getElementById('listaAmigos');
     //listaAmigos.innerHTML += `<li>${amigo}</li>`;
 
@@ -33,4 +28,15 @@ function agregarAmigoHTML(amigo) {
         listaAmigos.innerHTML += `<li>${amigosSorteo[i]}</li>`;
     }
     return;
+}
+
+function sortearAmigo() {
+    if( amigosSorteo.length === 0) {
+        alert('Por favor, agrega al menos un amigo antes de sortear.');
+        return;
+    }   
+    let numeroSorteado = Math.floor(Math.random() * amigosSorteo.length) + 1; 
+    let mensajeHTML = document.getElementById('resultado');
+    mensajeHTML.innerHTML = `El amigo sorteado es: <strong>${amigosSorteo[numeroSorteado - 1]}</strong>`;
+    
 }
