@@ -8,7 +8,7 @@ function agregarAmigo(){
     console.log(amigo);
     console.log(typeof(amigo));
     if (amigo === '') {
-        alert('Por favor, ingresa un nombre de amigo.');
+        alert('Por favor, ingresa el nombre de un amigo.');
         return;
     }
 
@@ -19,6 +19,7 @@ function agregarAmigo(){
     let listaAmigos = document.getElementById('listaAmigos');
     listaAmigos.innerHTML += `<li>${amigo}</li>`;
     document.getElementById('amigo').value = '';
-    
 
+    console.log(amigosSorteo);
+    return;
 }
