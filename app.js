@@ -38,5 +38,5 @@ function sortearAmigo() {
     let numeroSorteado = Math.floor(Math.random() * amigosSorteo.length) + 1; 
     let mensajeHTML = document.getElementById('resultado');
     mensajeHTML.innerHTML = `El amigo sorteado es: <strong>${amigosSorteo[numeroSorteado - 1]}</strong>`;
-    
+    return;
 }
